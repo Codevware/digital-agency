@@ -18,6 +18,10 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background)",
+        primary: "var(--primary-color)",
+        secondry: "var(--secondery-color)",
+        tertiary: "var(--tertiary-color)",
+        backgroundSecondary: "var(--background-secondery)",
       },
 
       // colors: {
