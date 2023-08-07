@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext", // You can target "esnext" for better compatibility and modern features.
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
+    "skipLibCheck": true, // Skipping library checks can improve build performance, but you might want to enable it for stricter type checking.
+    "strict": true, // Enabling strict mode ensures more type safety.
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": true, // Since you're using Next.js, you don't need TypeScript to emit files.
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "esnext", // Using "esnext" for module resolution is fine.
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "resolveJsonModule": true, // Allowing TypeScript to resolve JSON modules can be useful.
+    "isolatedModules": true, // This option can improve build performance.
+    "jsx": "preserve", // If you prefer to keep JSX as is in TypeScript files, this is fine.
+    "incremental": true, // Incremental compilation is a good option for faster rebuilds.
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"] // This setup seems fine for module path aliases.
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
