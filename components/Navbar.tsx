@@ -30,7 +30,7 @@ export default function Navbar() {
         </svg>
       </div>
 
-      <div>
+      <div className="text-[#666]">
         <Link href="#about" className="mr-6">
           About us
         </Link>
