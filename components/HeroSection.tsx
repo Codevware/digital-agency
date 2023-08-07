@@ -109,20 +109,19 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <div className="text-8xl font-bold text-center absolute left-96 top-10 text-[#333]">
+      <div className="text-8xl font-bold text-center absolute left-96 top-10 text-primary">
         <h2 className="relative">
-          We Are <br /> Creative <br /> Design Agency{" "}
-          <span className="absolute left-0 w-20 h-24 rounded-full fill-[#aff9ff] blur-lg"></span>
+          We Are <br /> Creative <br /> Design Agency
         </h2>
       </div>
 
       <div className="absolute bottom-2 right-44 max-w-md">
-        <p className="mb-6 text-[#666]">
+        <p className="mb-6 text-primary">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
           quo itaque laudantium harum vitae, et placeat aspernatur illo ipsa
           facere.
         </p>
-        <button className="px-4 py-2 bg-[#007d88] rounded text-white">
+        <button className="px-4 py-2 bg-secondry rounded text-white">
           Let&apos;s Talk
         </button>
       </div>
@@ -152,7 +151,7 @@ export default function HeroSection() {
           />
         </svg>
 
-        <div className="flex flex-col ml-4 underline text-[#666]">
+        <div className="flex flex-col ml-4 underline text-primary">
           <Link href="#">Dribble</Link>
           <Link href="#">Instagram</Link>
           <Link href="#">Twitter</Link>

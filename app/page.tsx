@@ -6,7 +6,7 @@ import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
   return (
-    <main className="bg-background h-screen">
+    <main className="bg-background">
       <HeroSection />
       <BrandingBar />
       <HighLights />

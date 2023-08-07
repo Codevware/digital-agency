@@ -9,87 +9,66 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import SectionWrapper from "./Container";
 
 export default function Navbar() {
   const { setTheme } = useTheme();
 
   return (
-    <nav className="flex justify-between items-center max-w-6xl mx-auto py-8">
-      <div>
-        <svg
-          width="122"
-          height="31"
-          viewBox="0 0 122 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5.33473 18.04H12.0547V22H0.204727V0.939999H5.33473V18.04ZM30.2816 13.36C30.2816 13.84 30.2516 14.34 30.1916 14.86H18.5816C18.6616 15.9 18.9916 16.7 19.5716 17.26C20.1716 17.8 20.9016 18.07 21.7616 18.07C23.0416 18.07 23.9316 17.53 24.4316 16.45H29.8916C29.6116 17.55 29.1016 18.54 28.3616 19.42C27.6416 20.3 26.7316 20.99 25.6316 21.49C24.5316 21.99 23.3016 22.24 21.9416 22.24C20.3016 22.24 18.8416 21.89 17.5616 21.19C16.2816 20.49 15.2816 19.49 14.5616 18.19C13.8416 16.89 13.4816 15.37 13.4816 13.63C13.4816 11.89 13.8316 10.37 14.5316 9.07C15.2516 7.77 16.2516 6.77 17.5316 6.07C18.8116 5.37 20.2816 5.02 21.9416 5.02C23.5616 5.02 25.0016 5.36 26.2616 6.04C27.5216 6.72 28.5016 7.69 29.2016 8.95C29.9216 10.21 30.2816 11.68 30.2816 13.36ZM25.0316 12.01C25.0316 11.13 24.7316 10.43 24.1316 9.91C23.5316 9.39 22.7816 9.13 21.8816 9.13C21.0216 9.13 20.2916 9.38 19.6916 9.88C19.1116 10.38 18.7516 11.09 18.6116 12.01H25.0316ZM38.1179 8.05C38.7179 7.13 39.4679 6.41 40.3679 5.89C41.2679 5.35 42.2679 5.08 43.3679 5.08V10.51H41.9579C40.6779 10.51 39.7179 10.79 39.0779 11.35C38.4379 11.89 38.1179 12.85 38.1179 14.23V22H32.9879V5.26H38.1179V8.05ZM52.18 5.02C53.36 5.02 54.39 5.26 55.27 5.74C56.17 6.22 56.86 6.85 57.34 7.63V5.26H62.47V21.97C62.47 23.51 62.16 24.9 61.54 26.14C60.94 27.4 60.01 28.4 58.75 29.14C57.51 29.88 55.96 30.25 54.1 30.25C51.62 30.25 49.61 29.66 48.07 28.48C46.53 27.32 45.65 25.74 45.43 23.74H50.5C50.66 24.38 51.04 24.88 51.64 25.24C52.24 25.62 52.98 25.81 53.86 25.81C54.92 25.81 55.76 25.5 56.38 24.88C57.02 24.28 57.34 23.31 57.34 21.97V19.6C56.84 20.38 56.15 21.02 55.27 21.52C54.39 22 53.36 22.24 52.18 22.24C50.8 22.24 49.55 21.89 48.43 21.19C47.31 20.47 46.42 19.46 45.76 18.16C45.12 16.84 44.8 15.32 44.8 13.6C44.8 11.88 45.12 10.37 45.76 9.07C46.42 7.77 47.31 6.77 48.43 6.07C49.55 5.37 50.8 5.02 52.18 5.02ZM57.34 13.63C57.34 12.35 56.98 11.34 56.26 10.6C55.56 9.86 54.7 9.49 53.68 9.49C52.66 9.49 51.79 9.86 51.07 10.6C50.37 11.32 50.02 12.32 50.02 13.6C50.02 14.88 50.37 15.9 51.07 16.66C51.79 17.4 52.66 17.77 53.68 17.77C54.7 17.77 55.56 17.4 56.26 16.66C56.98 15.92 57.34 14.91 57.34 13.63ZM76.3813 5.08C78.3413 5.08 79.9013 5.72 81.0613 7C82.2413 8.26 82.8313 10 82.8313 12.22V22H77.7313V12.91C77.7313 11.79 77.4413 10.92 76.8613 10.3C76.2813 9.68 75.5013 9.37 74.5213 9.37C73.5413 9.37 72.7613 9.68 72.1813 10.3C71.6013 10.92 71.3113 11.79 71.3113 12.91V22H66.1813V5.26H71.3113V7.48C71.8313 6.74 72.5313 6.16 73.4113 5.74C74.2913 5.3 75.2813 5.08 76.3813 5.08ZM85.3761 13.63C85.3761 11.89 85.7261 10.37 86.4261 9.07C87.1461 7.77 88.1361 6.77 89.3961 6.07C90.6761 5.37 92.1361 5.02 93.7761 5.02C95.8761 5.02 97.6261 5.57 99.0261 6.67C100.446 7.77 101.376 9.32 101.816 11.32H96.3561C95.8961 10.04 95.0061 9.4 93.6861 9.4C92.7461 9.4 91.9961 9.77 91.4361 10.51C90.8761 11.23 90.5961 12.27 90.5961 13.63C90.5961 14.99 90.8761 16.04 91.4361 16.78C91.9961 17.5 92.7461 17.86 93.6861 17.86C95.0061 17.86 95.8961 17.22 96.3561 15.94H101.816C101.376 17.9 100.446 19.44 99.0261 20.56C97.6061 21.68 95.8561 22.24 93.7761 22.24C92.1361 22.24 90.6761 21.89 89.3961 21.19C88.1361 20.49 87.1461 19.49 86.4261 18.19C85.7261 16.89 85.3761 15.37 85.3761 13.63ZM121.66 5.26L111.16 29.95H105.64L109.48 21.43L102.67 5.26H108.4L112.27 15.73L116.11 5.26H121.66Z"
-            fill="#333333"
-          />
-        </svg>
-      </div>
+    <div>
+      <SectionWrapper>
+        <nav className="flex justify-between items-center py-8">
+          <div>
+            <h1 className="font-bold text-4xl">Lergncy</h1>
+          </div>
 
-      <div className="text-[#666]">
-        <Link href="#about" className="mr-6">
-          About us
-        </Link>
-        <Link href="#projects" className="mr-6">
-          Projects
-        </Link>
-        <Link href="#services" className="mr-6">
-          Services
-        </Link>
-        <Link href="#contact" className="mr-6">
-          Contact us
-        </Link>
-      </div>
+          <div className="text-primary">
+            <Link href="#about" className="mr-6">
+              About us
+            </Link>
+            <Link href="#projects" className="mr-6">
+              Projects
+            </Link>
+            <Link href="#services" className="mr-6">
+              Services
+            </Link>
+            <Link href="#contact" className="mr-6">
+              Contact us
+            </Link>
+          </div>
 
-      <div className="flex items-center">
-        <div className="mr-2 relative">
-          <input
-            type="text"
-            placeholder="Find your service..."
-            className="h-10 rounded border px-2 bg-white"
-          />
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none" className="absolute"
-          >
-            <path
-              d="M12.3706 12.719L14.9998 15.3415M14.4127 7.70634C14.4127 11.4102 11.4102 14.4127 7.70634 14.4127C4.00253 14.4127 1 11.4102 1 7.70634C1 4.00253 4.00253 1 7.70634 1C11.4102 1 14.4127 4.00253 14.4127 7.70634Z"
-              stroke="#666666"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg> */}
-        </div>
+          <div className="flex items-center">
+            <div className="mr-2 relative">
+              <input
+                type="text"
+                placeholder="Find your service..."
+                className="h-10 rounded border px-2 bg-white"
+              />
+            </div>
 
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
-    </nav>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  System
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </nav>
+      </SectionWrapper>
+    </div>
   );
 }
