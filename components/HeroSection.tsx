@@ -110,15 +110,17 @@ export default function HeroSection() {
       </div>
 
       <div className="text-8xl font-bold text-center absolute left-96 top-10 text-[#333]">
-        <h2>We Are Creative Design Agency</h2>
+        <h2 className="relative">
+          We Are <br /> Creative <br /> Design Agency{" "}
+          <span className="absolute left-0 w-20 h-24 rounded-full fill-[#aff9ff] blur-lg"></span>
+        </h2>
       </div>
 
       <div className="absolute bottom-2 right-44 max-w-md">
         <p className="mb-6 text-[#666]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
           quo itaque laudantium harum vitae, et placeat aspernatur illo ipsa
-          facere, assumenda sit dolore odio magni soluta pariatur deleniti
-          quidem fuga.
+          facere.
         </p>
         <button className="px-4 py-2 bg-[#007d88] rounded text-white">
           Let&apos;s Talk

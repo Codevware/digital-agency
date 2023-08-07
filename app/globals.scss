@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+.branding_bar {
+  @apply bg-[#007d88] text-white text-xl uppercase font-bold py-4 my-2 flex justify-between;
+}
+
+ @layer base {
   :root {
     --background: #fff;
     --primary-color: #333;
@@ -16,7 +20,7 @@
     --primary-color: #fff;
     --secondery-color: #007d88;
   }
-} */
+} 
 
 /* @layer base {
   * {
