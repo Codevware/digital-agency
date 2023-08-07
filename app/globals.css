@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
     --background: #fff;
     --primary-color: #333;
     --secondery-color: #007d88;
     --tertiary-color: #666;
-    --background-secondery: #111;
+     --background-secondery: #111; 
   }
 
   .dark {
-    --background: #111;
+     --background: #111; 
     --primary-color: #fff;
     --secondery-color: #007d88;
   }
-}
+} */
 
 /* @layer base {
   * {

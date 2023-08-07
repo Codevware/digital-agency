@@ -14,13 +14,7 @@ export default function Navbar() {
   const { setTheme } = useTheme();
 
   return (
-    <nav className="flex justify-between items-center">
-      <div>
-        <Link href="#about">About us</Link>
-        <Link href="#projects">Projects</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#contact">Contact us</Link>
-      </div>
+    <nav className="flex justify-between items-center max-w-6xl mx-auto py-8">
       <div>
         <svg
           width="122"
@@ -35,7 +29,46 @@ export default function Navbar() {
           />
         </svg>
       </div>
+
       <div>
+        <Link href="#about" className="mr-6">
+          About us
+        </Link>
+        <Link href="#projects" className="mr-6">
+          Projects
+        </Link>
+        <Link href="#services" className="mr-6">
+          Services
+        </Link>
+        <Link href="#contact" className="mr-6">
+          Contact us
+        </Link>
+      </div>
+
+      <div className="flex items-center">
+        <div className="mr-2 relative">
+          <input
+            type="text"
+            placeholder="Find your service..."
+            className="h-10 rounded border px-2 bg-white"
+          />
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none" className="absolute"
+          >
+            <path
+              d="M12.3706 12.719L14.9998 15.3415M14.4127 7.70634C14.4127 11.4102 11.4102 14.4127 7.70634 14.4127C4.00253 14.4127 1 11.4102 1 7.70634C1 4.00253 4.00253 1 7.70634 1C11.4102 1 14.4127 4.00253 14.4127 7.70634Z"
+              stroke="#666666"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg> */}
+        </div>
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon">
