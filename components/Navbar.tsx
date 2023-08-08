@@ -1,7 +1,4 @@
 "use client";
-import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,6 +6,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Navbar() {
   const { setTheme } = useTheme();
@@ -63,7 +63,7 @@ export default function Navbar() {
               d="M12.3706 12.719L14.9998 15.3415M14.4127 7.70634C14.4127 11.4102 11.4102 14.4127 7.70634 14.4127C4.00253 14.4127 1 11.4102 1 7.70634C1 4.00253 4.00253 1 7.70634 1C11.4102 1 14.4127 4.00253 14.4127 7.70634Z"
               stroke="#666666"
               stroke-width="1.5"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
             />
           </svg> */}
