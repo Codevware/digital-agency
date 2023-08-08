@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import HighLights from "@/components/HighLights";
 
 import Portfolio from "@/components/Portfolio";
+import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       <HeroSection />
       <BrandingBar />
       <HighLights />
-      {/* <Portfolio /> */}
+      <Portfolio />
+      <Testimonial />
     </main>
   );
 }
