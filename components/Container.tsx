@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
 interface SectionWrapperProps {
-  children: ReactNode
-  className?: string | undefined
+  children: ReactNode;
+  className?: string | undefined;
 }
 
-const SectionWrapper = ({children }:SectionWrapperProps) => {
+const SectionWrapper = ({ children }: SectionWrapperProps) => {
   return (
     <div className="max-w-7xl mx-auto lg:px-14 md:px-10 sm:px-2 px-4 w-full overflow-x-hidden">
       {children}
@@ -13,4 +13,4 @@ const SectionWrapper = ({children }:SectionWrapperProps) => {
   );
 };
 
-export default SectionWrapper
+export default SectionWrapper;
